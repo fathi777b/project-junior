@@ -1,0 +1,46 @@
+body{
+    background-image: url(./image/acceuil.png);
+    background-repeat: no-repeat;
+
+}
+
+#logo{
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+}
+
+.app-container{
+    display: flex;
+    align-items: flex-start;
+
+}
+.app-container ul{
+    display: flex;
+    align-items: flex-start;
+    gap:6rem;
+    list-style: none;
+    margin-left: 180px;
+    font-size: x-large;
+   
+}
+
+.app-container ul li:hover{
+    background-color: cadetblue;
+    border-radius: 15px;
+    padding: 9px;
+
+}
+#input {
+ display: flex;
+margin-left: 100px;
+margin-top: 15px;
+width: 320px;
+padding: 10px;
+border-radius: 15px;
+}
+#ic{
+    position: absolute;
+    margin-top: -25px;
+    margin-left:400px;
+}
