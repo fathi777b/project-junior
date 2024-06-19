@@ -39,6 +39,7 @@ fetchAll()
 
 
   return (
+    <div>
     <div className='app-container'>
   <img src="https://graphicsfamily.com/wp-content/uploads/edd/2021/07/House-Logo-Design.jpg" alt=""  id = "logo"/>
       <ul >
@@ -47,10 +48,10 @@ fetchAll()
     <li>CreatHouse</li>
       </ul>
       <Search/>
-    
+      </div>
       {renderView()}
      
-    </div>
+      </div>
   )
 }
 
