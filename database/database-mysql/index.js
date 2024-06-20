@@ -44,6 +44,13 @@ const updateHouse = (callback,name,description,id)=>{
   })
 }
 
+const getOneHouse = (callback,name)=>{
+  const sql = " select * from house WHERE name=?"
+  connection.query(sql,name,function(err,result){
+  callback(err,result)
+  })
+}
+
 module.exports = {
-  selectAll,addHouse,deleteHouse,updateHouse
+  selectAll,addHouse,deleteHouse,updateHouse,getOneHouse
 };

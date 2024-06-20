@@ -1,13 +1,18 @@
-import React from "react";
-import { FaSearchLocation } from "react-icons/fa";
-const Search = ()=>{
-    return (
-      <div>
-        <input type="text" id="input" placeholder="Search"/>
-        <FaSearchLocation id="ic"/>
-        </div>
-    )
-}
+// import React, { useState } from "react";
+//
 
 
-export  default Search;
+// const Search = ()=>{
+// const [name , setName]=useState("")
+
+//     return (
+//       <div>
+//         <input type="text" id="input" placeholder="Search" onChange={(e)=>{setName(e.target.value)}}/>
+//         <button onClick={()=>{searchHouse(name)}}>click</button>
+//         <FaSearchLocation id="ic"/>
+//         </div>
+//     )
+// }
+
+
+// export  default Search;

@@ -47,6 +47,17 @@ app.get("/api/items", function (req, res) {
   },name,description,id)
  })
 
+
+ app.get("/api/items/:name" , function(req,res){
+  var name = req.params.name
+  console.log(name);
+  database.getOneHouse((err,result)=>{
+ if(err)res.status(500).send(err)
+  else res.status(200).json(result)
+  },name)
+
+ })
+
 app.listen(PORT, function () {
   console.log("listening on port 3000!");
 });
