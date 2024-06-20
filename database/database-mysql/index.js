@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "root",
-  database: "happyHouse",
+  database: "postHouse",
 });
 
 connection.connect((err) => {
@@ -37,6 +37,13 @@ const deleteHouse= (callback,id)=>{
   })
 }
 
+const updateHouse = (callback,name,description,id)=>{
+  const sql = " UPDATE house SET name=(?),description=(?) WHERE id=?"
+  connection.query(sql,[name,description,id],(err,result)=>{
+ callback(err,result)
+  })
+}
+
 module.exports = {
-  selectAll,addHouse,deleteHouse
+  selectAll,addHouse,deleteHouse,updateHouse
 };

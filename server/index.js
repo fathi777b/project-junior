@@ -37,6 +37,16 @@ app.get("/api/items", function (req, res) {
    },id)
  })
 
+ app.put("/api/items/:id",function(req,res){
+  var id = req.params.id
+  var name = req.body.name
+  var description=req.body.description
+  database.updateHouse((err,result)=>{
+    if(err)res.status(500).send(err)
+      else res.status(200).json(result)
+  },name,description,id)
+ })
+
 app.listen(PORT, function () {
   console.log("listening on port 3000!");
 });

@@ -1,15 +1,21 @@
 import React from 'react';
-
+import { MdNotListedLocation } from "react-icons/md";
+import { IoMdContact } from "react-icons/io";
 const HouseDetaill = (props) =>{
-  console.log(props)
+  console.log(props.house)
   return(
+  
     <div className='house'>
-     {/* <img src={props.house.url-img} alt={props.house.name} /> */}
-     <h1 > {props.house.name}</h1>
-     <h5 className='desc'>{props.house.description}</h5>
-     <h3 className ="loc" >{props.house.location}</h3>
-     <h2 className='price'>price: {props.house.price}DTN</h2>
+     <img src={props.house.image} alt={props.house.name} className='img'  onClick={()=>{props.onehouse(props.house)}} />
+     <h2 className='name'> :{props.house.name}</h2>
+     <IoMdContact id="logoname" />
+    
+     <MdNotListedLocation id="logoLocation"/>
+     <h4 className ="loc" >{props.house.location}</h4>
+     <h3 className='price'>price: {props.house.price}DTN</h3>
+     <button className='delete'>delete</button>
     </div>
+   
   )
 
 } 

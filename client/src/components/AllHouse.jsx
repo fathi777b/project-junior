@@ -4,12 +4,12 @@ import HouseDetaill from "./HouseDetaill.jsx";
 
 const AllHouse = (props) => {
   return (
-  <div>
+  <div className="houses">
  
 
   {props.items.map((elem)=>{
     {console.log(elem)}
-    return <HouseDetaill key={elem.id} house={elem}/>
+    return <HouseDetaill key={elem.id} house={elem} onehouse = {props.onehouse}/>
   })} 
 
   </div>
