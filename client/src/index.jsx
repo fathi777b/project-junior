@@ -105,7 +105,7 @@ fetchAll()
     <li onClick={()=>{setView("create")}}>CreatHouse</li>
       </ul>
       <input type="text" id="input" placeholder="Search" onChange={(e)=>{setName(e.target.value)}}/>
-        <button onClick={()=>{searchHouse(name)}}>click</button>
+        <button className='click' onClick={()=>{searchHouse(name)}}>click</button>
         <FaSearchLocation id="ic"/>
       </div>
       {renderView()}

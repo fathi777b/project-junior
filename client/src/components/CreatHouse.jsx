@@ -9,8 +9,8 @@ const CreatHouse = (props)=>{
     const [location ,setLocation] = useState("")
     const [price , setPrice]=useState(0)
     return (
+        <div id = 'cr'>
         <div className="creat">
-   
     <input type="text" placeholder="url image" onChange={(e)=>{setImage(e.target.value)}} />
     <input type="text" placeholder=" name house"  onChange={(e)=>{setName(e.target.value)}}/>
     <input type="text" placeholder="  description of house" onChange={(e)=>{setDesription(e.target.value)}}/>
@@ -18,7 +18,7 @@ const CreatHouse = (props)=>{
     <input type="number" name="price" onChange={(e)=>{setPrice(e.target.value) }} />
   
     <button onClick={()=>{props.createHouse({image,name,description,location,price})}}>add house</button>
-
+    </div>
         </div>
     )
 }
