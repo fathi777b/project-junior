@@ -31,6 +31,14 @@ const createHouse = (newhouse)=>{
   }).catch((error)=>{console.log(error)})
 }
 
+const updateHouse = (name,description,id)=>{
+  axios.put(`http://127.0.0.1:3000/api/items/${id}`,{name,description})
+  .then(()=>{
+    setRefetch(!refetch)
+    setView("allhouse")
+  }).catch((error)=>{console.log(error)})
+}
+
    
  useEffect(()=>{
 fetchAll()
@@ -50,7 +58,7 @@ fetchAll()
       return <CreatHouse createHouse={createHouse} />
     }
     else if (view === "onehouse")  {
-      return <OneHouse iteme = {house}/>
+      return <OneHouse iteme = {house} updateHouse={updateHouse} />
     }
     else {
       return <AllHouse/>
