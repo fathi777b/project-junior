@@ -34,6 +34,15 @@ const createHouse = (newhouse)=>{
     setRefetch(!refetch)
   }).catch((error)=>{console.log(error)})
 }
+const deleteHouse = (id)=>{
+  axios.delete(`http://127.0.0.1:3000/api/items/${id}`)
+  .then(()=>{
+    setRefetch(!refetch)
+    setView("allhouse")
+
+  }).catch((error)=>{console.log(error)})
+
+}
 
 const updateHouse = (name,description,id)=>{
   axios.put(`http://127.0.0.1:3000/api/items/${id}`,{name,description})
@@ -70,7 +79,7 @@ fetchAll()
       return <CreatHouse createHouse={createHouse} />
     }
     else if (view === "onehouse")  {
-      return <OneHouse iteme = {house} updateHouse={updateHouse} />
+      return <OneHouse iteme = {house} updateHouse={updateHouse}  deleteHouse= {deleteHouse}/>
     }
     else if (view === "house"){
       return <House house={houseSearched} />

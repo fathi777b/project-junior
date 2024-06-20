@@ -15,7 +15,7 @@ const OneHouse = (props)=>{
      <input type="text"  placeholder="update description" className="inputname"  onChange={(e)=>{setDescription(e.target.value)}}/>
      <h4 className ="loc" >{props.iteme.location}</h4>
      <h3 className='price'>price: {props.iteme.price}DTN</h3>
-     <button className='delete'>delete</button>
+     <button className='delete' onClick={()=>{props.deleteHouse(props.iteme.id)}}>delete</button>
      <button onClick={()=>{props.updateHouse(name,description,props.iteme.id)}}>update</button>
         </div>
         </div>
