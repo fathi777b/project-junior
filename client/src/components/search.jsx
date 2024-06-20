@@ -1,18 +1,19 @@
-// import React, { useState } from "react";
-//
+import React from "react";
 
 
-// const Search = ()=>{
-// const [name , setName]=useState("")
-
-//     return (
-//       <div>
-//         <input type="text" id="input" placeholder="Search" onChange={(e)=>{setName(e.target.value)}}/>
-//         <button onClick={()=>{searchHouse(name)}}>click</button>
-//         <FaSearchLocation id="ic"/>
-//         </div>
-//     )
-// }
-
-
-// export  default Search;
+const SearchHouse = (props)=>{
+    const house = props.items.filter((elem)=>{
+        return elem.name === props.name 
+    }) 
+console.log(house);
+    return(
+<div className='house'>
+     <img src={house[0].image} alt={house[0].name} className='img'  />
+     <h2 className='name'>{house[0].name}</h2>
+     <h4 className ="loc" >{house[0].location}</h4>
+     <h3 className='price'>price: {house[0].price} TND</h3>
+     
+    </div>
+    )
+}
+export default SearchHouse

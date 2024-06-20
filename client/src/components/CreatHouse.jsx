@@ -17,7 +17,7 @@ const CreatHouse = (props)=>{
     <input type="text" placeholder=" location of house " onChange={(e)=>{setLocation(e.target.value)}}/>
     <input type="number" name="price" onChange={(e)=>{setPrice(e.target.value) }} />
   
-    <button onClick={()=>{props.createHouse({image,name,description,location,price})}}>add house</button>
+    <button onClick={()=>{props.createHouse({image,name,description,location,price}),props.setView("allhouse")}}>add house</button>
     </div>
         </div>
     )

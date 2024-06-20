@@ -8,7 +8,6 @@ const AllHouse = (props) => {
  
 
   {props.items.map((elem)=>{
-    {console.log(elem)}
     return <HouseDetaill key={elem.id} house={elem} onehouse = {props.onehouse}/>
   })} 
 

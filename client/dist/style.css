@@ -14,6 +14,7 @@
     display: flex;
     align-items: flex-start;
     
+    
 
 }
 .app-container ul{
@@ -55,8 +56,11 @@ margin-left: 50px;
 margin-top: 20px;
 width: 250px;
 height: 22%;
+border-radius: 45px 0px;
 
-
+}
+.house :hover{
+background-color: aliceblue;
 
 }
 
@@ -98,6 +102,10 @@ width: 220px;
     display: flex;
     flex-wrap: wrap;
     background-color: hwb(32 46% 11%) ;
+}
+.houses :hover{
+    background-color: rgb(178, 194, 208);
+   
 }
 
 .logocreate{
@@ -180,4 +188,6 @@ width: 220px;
    border-radius: 15px 0px;
    
 }
+
+
 

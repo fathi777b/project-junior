@@ -2,7 +2,6 @@ import React from 'react';
 import { MdNotListedLocation } from "react-icons/md";
 import { IoMdContact } from "react-icons/io";
 const HouseDetaill = (props) =>{
-  console.log(props.house)
   return(
   
     <div className='house'>
